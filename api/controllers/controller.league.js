@@ -1,4 +1,14 @@
-const findLeague = require('../repository/league.repository.js');
+const {findLeague, findLeagues} = require('../repository/league.repository.js');
+
+const getLeagues = async(req, res) => {
+  const dataLeagues = await findLeagues();
+  
+  if(!dataLeagues) {
+    return res.status(404).send('not found');
+  }
+  
+  res.json(dataLeagues);
+}
 
 const getLeague = async (req, res) => {
   const nameLeague = req.query.name;
@@ -11,4 +21,7 @@ const getLeague = async (req, res) => {
   res.json(dataLeague);
 }
 
-module.exports = getLeague;
+module.exports = {
+  getLeagues,
+  getLeague
+}

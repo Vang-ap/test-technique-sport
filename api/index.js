@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 
 const leagueRouter = require('./routes/league.route');
 const teamRouter = require('./routes/team.route');
+const playerRouter = require('./routes/player.route')
 
 const app = express();
 const env = process.env;
@@ -28,6 +29,7 @@ app.use(cors());
 
 app.use('/league', leagueRouter);
 app.use('/team', teamRouter);
+app.use('/player', playerRouter);
 
 app.listen(port, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
