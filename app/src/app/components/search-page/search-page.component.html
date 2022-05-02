@@ -1,15 +1,23 @@
-<p>search-page works!</p>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 <div class="search">
 
   <div class="search-container">
     <div class="search-content">
-      <label for="typeahead-format">Rechercher une infos sur le sport</label>
-      <input id="typeahead-format" type="text" class="form-control search-input" [(ngModel)]="model"
-        (change)="onChange($event)" />
+      <input id="typeahead-format" type="text" class="form-control search-input" placeholder="Search by league"
+        [(ngModel)]="model" (change)="onChange($event)" (keyup)="onKey($event)" />
+
+      <button *ngIf="values" (click)="deleteValue()" type="button" class="btn btn-link btn-delete">
+        <span class="bi bi-x-circle-fill"></span>
+      </button>
     </div>
+
+    <button (click)="searchValide()" type="button" class="btn btn-primary btn-search">
+      <span class="bi bi-search"></span>
+      Rechercher
+    </button>
   </div>
-
-  <app-league-item *ngFor="let league of leagues | search:query" [league]="league"></app-league-item>
-
 </div>
+
+<!-- <div id="league-list">
+  <app-league *ngFor="let league of leagues | search:query">{{ league.name }}</app-league>
+</div> -->

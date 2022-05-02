@@ -13,11 +13,13 @@ export class TeamService {
     private httpClient: HttpClient,
   ) { }
 
+  // get all teams
   getTeams(): Observable<Team[]> {
     const url = `${environment.apiUrl}/team/all`;
     return this.httpClient.get<Team[]>(url);
   }
 
+  // get a team by name
   getTeam(name: string): Observable<Team[]> {
     const url = `${environment.apiUrl}/team?name=${name}`;
     return this.httpClient.get<Team[]>(url);
