@@ -1,0 +1,11 @@
+.toolbar {
+  z-index: 1;
+  padding: 43px 10px;
+  background-color: #cccc;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 110%;
+}

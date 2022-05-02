@@ -1,3 +1,23 @@
 .search-input {
-  width: auto;
+  width: 27rem;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.search-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-delete {
+  position: absolute;
+  left: 57.1%;
+  text-decoration: none;
+}
+
+.btn-search {
+  margin-left: 0.5rem;
 }
