@@ -1,0 +1,15 @@
+<p>search-page works!</p>
+
+<div class="search">
+
+  <div class="search-container">
+    <div class="search-content">
+      <label for="typeahead-format">Rechercher une infos sur le sport</label>
+      <input id="typeahead-format" type="text" class="form-control search-input" [(ngModel)]="model"
+        (change)="onChange($event)" />
+    </div>
+  </div>
+
+  <app-league-item *ngFor="let league of leagues | search:query" [league]="league"></app-league-item>
+
+</div>
