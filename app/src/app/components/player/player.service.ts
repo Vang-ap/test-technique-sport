@@ -13,11 +13,13 @@ export class PlayerService {
     private httpClient: HttpClient,
   ) { }
 
+  // get all players
   getPlayers(): Observable<Player[]> {
     const url = `${environment.apiUrl}/player/all`;
     return this.httpClient.get<Player[]>(url);
   }
 
+  // get a player by name
   getPlayer(name: string): Observable<Player[]> {
     const url = `${environment.apiUrl}/player?name=${name}`;
     return this.httpClient.get<Player[]>(url);
