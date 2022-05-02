@@ -1,0 +1,5 @@
+<p>home-page works!</p>
+
+<div id="league-list">
+  <app-league *ngFor="let league of leagues | search:query">{{ league.name }}</app-league>
+</div>

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { League } from 'src/app/models/league';
-import { LeagueService } from '../league/league.service';
+import { LeagueService } from '../../services/league.service';
 
 @Component({
   selector: 'app-search-page',
@@ -31,11 +31,9 @@ export class SearchPageComponent implements OnInit {
 
   // detect change input value
   onChange(event: any) {
-    console.log('leagues data:', this.leagues);
     const value = event.target.value;
     this.inittalizeItem();
     console.log('Value input :', event.target.value);
-    console.log('model', this.model);
 
     if (value && value.trim() != '') {
 
