@@ -1,5 +1,6 @@
-const {findLeague, findLeagues} = require('../repository/league.repository.js');
+const {findLeague, findLeagues, findOneByLeagueId} = require('../repository/league.repository.js');
 
+// get all leagues
 const getLeagues = async(req, res) => {
   const dataLeagues = await findLeagues();
   
@@ -10,6 +11,22 @@ const getLeagues = async(req, res) => {
   res.json(dataLeagues);
 }
 
+// get a league by id
+const getLeagueId = async (req, res) => {
+  const idLeague = req.params.id;
+  
+  console.log(idLeague)
+  
+  const dataLeaguePartId = await findOneByLeagueId(idLeague);
+  
+  if(!dataLeaguePartId) {
+    return res.status(404).send('not found');
+  }
+  
+  res.json(dataLeaguePartId);
+}
+
+// get a league by name
 const getLeague = async (req, res) => {
   const nameLeague = req.query.name;
   const dataLeague = await findLeague(nameLeague);
@@ -23,5 +40,6 @@ const getLeague = async (req, res) => {
 
 module.exports = {
   getLeagues,
-  getLeague
+  getLeague,
+  getLeagueId
 }

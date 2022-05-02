@@ -1,18 +1,18 @@
 const Team = require('../models/team.model');
 
-// récupérer la liste des équipes
+// find all teams
 const findTeams = async () => {
   const teams = await Team.find()
   return teams
 };
 
-// récupérer une équipes par l'id
-const findTeamId = async idTeams => {
-  const teampartId = await Team.find({idTeams})
-  return teampartId
+// find a one team by id
+const findOneByTeamId = async idTeams => {
+  const teamPartId = await Team.findOne({_id: idTeams})
+  return teamPartId
 };
 
-// récupérer une équipe
+// find a one team by name
 const findTeam = async name => {
   const team = await Team.findOne({name})
   return team
@@ -21,5 +21,5 @@ const findTeam = async name => {
 module.exports = {
   findTeams,
   findTeam,
-  findTeamId
+  findOneByTeamId
 };

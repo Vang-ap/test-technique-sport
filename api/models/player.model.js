@@ -9,8 +9,8 @@ const playerSchema = new Schema({
   position: String,
   thumbnail: String,
   signin: {
-    amount: number,
-    currency: string
+    amount: Number,
+    currency: String
   },
   born: String,
 });

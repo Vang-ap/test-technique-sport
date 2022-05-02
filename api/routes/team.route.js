@@ -6,6 +6,6 @@ const {getTeams, getTeam, getTeamId} = require('../controllers/controller.team')
 
 teamRouter.get('/all', getTeams);
 teamRouter.get('', getTeam);
-teamRouter.get('/id', getTeamId)
+teamRouter.get('/:id', getTeamId)
 
 module.exports = teamRouter;
