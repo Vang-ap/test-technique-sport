@@ -13,6 +13,8 @@ import { TeamComponent } from './components/team/team.component';
 import { TeamItemComponent } from './components/team-item/team-item.component';
 import { PlayerComponent } from './components/player/player.component';
 import { PlayerItemComponent } from './components/player-item/player-item.component';
+import { LeagueComponent } from './components/league/league.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 
 @NgModule({
@@ -25,6 +27,8 @@ import { PlayerItemComponent } from './components/player-item/player-item.compon
     TeamItemComponent,
     PlayerComponent,
     PlayerItemComponent,
+    LeagueComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
