@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { League } from 'src/app/models/league';
-import { LeagueService } from '../../services/league.service';
+import { SearchPageService } from 'src/app/services/search-page.service';
 
 @Component({
   selector: 'app-league',
@@ -8,19 +8,16 @@ import { LeagueService } from '../../services/league.service';
   styleUrls: ['./league.component.scss']
 })
 export class LeagueComponent implements OnInit {
-  model: any;
   leagues!: League[];
-  query = '';
 
   constructor(
-    private leagueService: LeagueService
+    private searchPageService: SearchPageService
   ) { }
 
   ngOnInit(): void {
-    this.leagueService.getLeagues().subscribe((response: League[]) => {
-      this.leagues = response
+    this.searchPageService.searchResponse$.subscribe((response: League[]) => {
+      this.leagues = response;
     })
-
   }
 
 }

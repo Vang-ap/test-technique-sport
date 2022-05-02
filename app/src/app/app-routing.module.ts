@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { LeagueComponent } from './components/league/league.component';
 import { PlayerComponent } from './components/player/player.component';
-import { SearchPageComponent } from './components/search-page/search-page.component';
 import { TeamComponent } from './components/team/team.component';
 
 const routes: Routes = [
@@ -16,10 +15,9 @@ const routes: Routes = [
     component: LeagueComponent
   },
   {
-    path: 'teams',
+    path: 'teams/:leagueId',
     component: TeamComponent
   },
-
   {
     path: 'players',
     component: PlayerComponent

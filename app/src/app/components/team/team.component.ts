@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { League } from 'src/app/models/league';
 import { Team } from 'src/app/models/team';
+import { LeagueService } from 'src/app/services/league.service';
 import { TeamService } from '../../services/team.service';
 
 @Component({
@@ -8,19 +11,24 @@ import { TeamService } from '../../services/team.service';
   styleUrls: ['./team.component.scss']
 })
 export class TeamComponent implements OnInit {
-  teams!: Team[];
   query = '';
+  league !: League;
 
   constructor(
-    private teamService: TeamService
+    private teamService: TeamService,
+    private leagueService: LeagueService,
+    private route: ActivatedRoute,
+
   ) { }
 
   ngOnInit(): void {
-    this.teamService.getTeams().subscribe((response: Team[]) => {
-      this.teams = response
-    })
+    this.route.params.subscribe((params: any) => {
+      this.leagueService.getLeagueId(params.leagueId).subscribe((response: League) => {
+        console.log('response:', response);
 
-    console.log('data team:', this.teams);
+        this.league = response;
+      })
+    })
 
   }
 

@@ -24,4 +24,10 @@ export class TeamService {
     const url = `${environment.apiUrl}/team?name=${name}`;
     return this.httpClient.get<Team[]>(url);
   }
+
+  // get a team by id
+  getTeamId(id: string): Observable<Team> {
+    const url = `${environment.apiUrl}/team/${id}`;
+    return this.httpClient.get<Team>(url);
+  }
 }

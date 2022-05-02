@@ -24,4 +24,10 @@ export class LeagueService {
     const url = `${environment.apiUrl}/league?name=${name}`;
     return this.httpClient.get<League[]>(url);
   }
+
+  // get a league by id
+  getLeagueId(id: string): Observable<League> {
+    const url = `${environment.apiUrl}/league/${id}`;
+    return this.httpClient.get<League>(url);
+  }
 }

@@ -24,4 +24,10 @@ export class PlayerService {
     const url = `${environment.apiUrl}/player?name=${name}`;
     return this.httpClient.get<Player[]>(url);
   }
+
+  // get a player by id
+  getPlayerId(id: string): Observable<Player> {
+    const url = `${environment.apiUrl}/player/${id}`;
+    return this.httpClient.get<Player>(url);
+  }
 }

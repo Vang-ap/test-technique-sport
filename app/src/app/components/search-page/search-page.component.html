@@ -4,17 +4,12 @@
   <div class="search-container">
     <div class="search-content">
       <input id="typeahead-format" type="text" class="form-control search-input" placeholder="Search by league"
-        [(ngModel)]="model" (change)="onChange($event)" (keyup)="onKey($event)" />
+        [(ngModel)]="model" (keyup)="onKey()" />
 
-      <button *ngIf="values" (click)="deleteValue()" type="button" class="btn btn-link btn-delete">
+      <button *ngIf="model.length" (click)="deleteValue()" type="button" class="btn btn-link btn-delete">
         <span class="bi bi-x-circle-fill"></span>
       </button>
     </div>
-
-    <button (click)="searchValide()" type="button" class="btn btn-primary btn-search">
-      <span class="bi bi-search"></span>
-      Rechercher
-    </button>
   </div>
 </div>
 

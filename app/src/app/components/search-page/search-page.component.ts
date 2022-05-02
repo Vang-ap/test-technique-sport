@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { League } from 'src/app/models/league';
-import { LeagueService } from '../../services/league.service';
+import { Component, OnInit } from '@angular/core';
+import { SearchPageService } from 'src/app/services/search-page.service';
 
 @Component({
   selector: 'app-search-page',
@@ -8,61 +7,22 @@ import { LeagueService } from '../../services/league.service';
   styleUrls: ['./search-page.component.scss']
 })
 export class SearchPageComponent implements OnInit {
-  model: any;
-
-  leagues!: League[];
-  query = '';
-  values = '';
-
+  model = '';
 
   constructor(
-    private leagueService: LeagueService
+    private searchPageService: SearchPageService
   ) { }
 
   ngOnInit(): void { }
 
-  // inisiatilation items
-  inittalizeItem() {
-    this.leagueService.getLeagues().subscribe((response: League[]) => {
-      this.leagues = response
-    })
-    // this.items = this.leagues;
-  }
-
-  // detect change input value
-  onChange(event: any) {
-    const value = event.target.value;
-    this.inittalizeItem();
-    console.log('Value input :', event.target.value);
-
-    if (value && value.trim() != '') {
-
-    }
-  }
-
   // detect key press
-  onKey(event: any) {
-    this.values += event.target.value + ' | ';
-    console.log('values enter =>', this.values);
-  }
-
-  // search validation
-  searchValide() {
-    this.inittalizeItem();
-    console.log('VALIDER');
-    this.query = '';
-
+  onKey() {
+    this.searchPageService.search(this.model)
   }
 
   // search delete
   deleteValue() {
-    console.log('DELETE');
-    this.values = '';
-    this.model = null;
-    this.leagues = [];
-
-
+    this.model = '';
+    this.onKey();
   }
-
-
 }
