@@ -4,7 +4,7 @@ const {findTeams, findTeam, findOneByTeamId} = require('../repository/team.repos
 const getTeams = async (req, res) => {
   const dataTeams = await findTeams();
   
-  if(!dataTeams) {
+  if (!dataTeams) {
     return res.status(404).send('not found');
   };
   
@@ -16,7 +16,7 @@ const getTeam = async (req, res) => {
   const nameTeam = req.query.name;
   const dataTeam = await findTeam(nameTeam);
   
-  if(!dataTeam) {
+  if (!dataTeam) {
     return res.status(404).send('not found');
   };
   
@@ -28,7 +28,7 @@ const getTeamId = async (req, res) => {
   const idTeam = req.params.id;
   const dataTeamPartId = await findOneByTeamId(idTeam);
   
-  if(!dataTeamPartId) {
+  if (!dataTeamPartId) {
     return res.status(404).send('not found');
   };
   

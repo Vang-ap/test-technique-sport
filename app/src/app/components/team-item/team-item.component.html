@@ -1,10 +1,14 @@
 <div *ngIf="team" class=" card" style="width: 18rem;">
-  <img class="card-img-top" src="{{ team.thumbnail }}" alt="logo team">
+  <img class="card-img-top" [src]="team.thumbnail" alt="logo team">
+
   <div class="card-body">
-    <h5 class="card-title">{{team.name}}</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+    <h5 class="card-title">{{ team.name }}</h5>
+
+    <p class="card-text">
+      Some quick example text to build on the card title and make up the bulk of the card's
       content.
     </p>
+
     <a class="btn btn-primary" [routerLink]="['/players']">Voir les joueurs</a>
   </div>
 </div>

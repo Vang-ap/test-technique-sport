@@ -4,7 +4,7 @@ const {findPlayers, findPlayer, findOneByPlayerId} = require('../repository/play
 const getPlayers = async (req, res) => {
   const dataPlayers = await findPlayers();
   
-  if(!dataPlayers) {
+  if (!dataPlayers) {
     return res.status(404).send('not found');
   };
   
@@ -16,7 +16,7 @@ const getPlayer = async (req, res) => {
   const namePlayer = req.query.name;
   const dataPlayer = await findPlayer(namePlayer);
   
-  if(!dataPlayer) {
+  if (!dataPlayer) {
     return res.status(404).send('not found');
   };
   
@@ -28,7 +28,7 @@ const getPlayerPartId = async (req, res) => {
   const idPlayer = req.params.id;
   const dataPlayerId = await findOneByPlayerId(idPlayer);
   
-  if(!dataPlayerId) {
+  if (!dataPlayerId) {
     return res.status(404).send('not found');
   };
   

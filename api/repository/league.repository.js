@@ -14,8 +14,9 @@ const findLeague = async name => {
 
 // find a league by id
 const findOneByLeagueId = async idLeague => {
-  const leaguePartId = await League.findOne({_id: idLeague})
-  return leaguePartId
+  const leaguePartId = await League.findOne({_id: idLeague});
+
+  return leaguePartId;
 }
 
 module.exports = {
