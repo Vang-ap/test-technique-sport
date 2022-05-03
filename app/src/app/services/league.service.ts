@@ -18,11 +18,11 @@ export class LeagueService {
     return this.httpClient.get<League[]>(url);
   }
 
-  // get a league by name
-  getLeague(name: string): Observable<League[]> {
-    const url = `${environment.apiUrl}/league?name=${name}`;
-    return this.httpClient.get<League[]>(url);
-  }
+  // // get a league by name
+  // getLeague(name: string): Observable<League[]> {
+  //   const url = `${environment.apiUrl}/league?name=${name}`;
+  //   return this.httpClient.get<League[]>(url);
+  // }
 
   // get a league by id
   getLeagueId(id: string): Observable<League> {

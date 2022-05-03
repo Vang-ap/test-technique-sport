@@ -15,6 +15,7 @@ export class PlayerService {
   // get all players
   getPlayers(): Observable<Player[]> {
     const url = `${environment.apiUrl}/player/all`;
+
     return this.httpClient.get<Player[]>(url);
   }
 

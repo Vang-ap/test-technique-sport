@@ -17,7 +17,7 @@ export class SearchService {
   ) {
     this.leagueService.getLeagues().subscribe((response: League[]) => {
       this.leagues = response;
-    })
+    });
   }
 
   search(value: string) {

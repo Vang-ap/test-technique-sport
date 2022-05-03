@@ -18,11 +18,11 @@ export class TeamService {
     return this.httpClient.get<Team[]>(url);
   }
 
-  // get a team by name
-  getTeam(name: string): Observable<Team[]> {
-    const url = `${environment.apiUrl}/team?name=${name}`;
-    return this.httpClient.get<Team[]>(url);
-  }
+  // // get a team by name
+  // getTeam(name: string): Observable<Team[]> {
+  //   const url = `${environment.apiUrl}/team?name=${name}`;
+  //   return this.httpClient.get<Team[]>(url);
+  // }
 
   // get a team by id
   getTeamId(id: string): Observable<Team> {

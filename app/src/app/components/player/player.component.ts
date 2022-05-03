@@ -19,4 +19,8 @@ export class PlayerComponent implements OnInit {
       this.players = response;
     })
   }
+
+  goBack() {
+    history.back();
+  }
 }
