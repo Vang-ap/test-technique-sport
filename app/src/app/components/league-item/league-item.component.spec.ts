@@ -8,14 +8,20 @@ describe('LeagueItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LeagueItemComponent ]
+      declarations: [LeagueItemComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(LeagueItemComponent);
     component = fixture.componentInstance;
+    component.league = {
+      "_id": "5d2cdcf7da07b95bb8f16ed1",
+      "name": "English Premier League",
+      "sport": "soccer",
+      "teams": []
+    };
     fixture.detectChanges();
   });
 
