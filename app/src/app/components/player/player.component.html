@@ -1,1 +1,16 @@
-<app-player-item *ngFor="let player of players" [player]="player"></app-player-item>
+<div class="toolbar" role="banner">
+  <div class="content-header">
+    <div class="content-btn">
+      <button type="button" class="btn btn-link" [routerLink]="['']"><span
+          class="bi bi-arrow-bar-left"></span>Back</button>
+    </div>
+
+    <div class="title-player-content">
+      <h1 class="title-player">Joueurs</h1>
+    </div>
+  </div>
+</div>
+
+<div class="players">
+  <app-player-item *ngFor="let player of players" [player]="player" class="player-item"></app-player-item>
+</div>

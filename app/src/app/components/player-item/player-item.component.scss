@@ -1,0 +1,21 @@
+.btn-go-back {
+  margin-top: -4rem;
+}
+.card {
+  width: 18rem;
+}
+
+// RESPONSIVE
+// mobile M 320px to mobile L 425px
+@media only screen and (min-width: 375px) and (max-width: 425px) {
+  .card {
+    width: fit-content;
+  }
+}
+
+// screen 1440px
+@media only screen and (max-width: 1440px) {
+  .card {
+    margin: 0.8rem;
+  }
+}

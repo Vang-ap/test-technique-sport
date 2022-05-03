@@ -21,3 +21,34 @@
 .btn-search {
   margin-left: 0.5rem;
 }
+
+// RESPONSIVE
+// mobile S 320px to mobile L 425px
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+  .search-input {
+    width: 17rem ;
+  }
+
+  .btn-delete {
+    position: absolute;
+    left: 79.1%;
+    text-decoration: none;
+  }
+}
+
+
+@media only screen and (min-width: 375px) and (max-width: 425px) {
+  .search-input {
+    width: 24rem ;
+  }
+
+  .btn-delete {
+    position: absolute;
+    left: 79.1%;
+    text-decoration: none;
+  }
+}

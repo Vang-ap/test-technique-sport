@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Player } from 'src/app/models/player';
-
 @Component({
   selector: 'app-player-item',
   templateUrl: './player-item.component.html',
@@ -15,7 +14,6 @@ export class PlayerItemComponent implements OnInit {
 
   ngOnInit(): void {
     this.dateBorn = this.player.born
-    console.log('date', this.dateBorn);
   }
 
 }
