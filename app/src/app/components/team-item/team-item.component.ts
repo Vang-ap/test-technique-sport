@@ -18,10 +18,7 @@ export class TeamItemComponent implements OnInit {
 
   ngOnInit(): void {
     this.teamService.getTeamId(this.teamId).subscribe((response: Team) => {
-      console.log('response team:', response);
-
       this.team = response;
     })
   }
-
 }

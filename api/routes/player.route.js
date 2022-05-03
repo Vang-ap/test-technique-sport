@@ -1,7 +1,5 @@
 const express = require('express');
-
 const playerRouter = express.Router();
-
 const {getPlayers, getPlayer, getPlayerPartId} = require('../controllers/controller.player');
 
 playerRouter.get('/all', getPlayers);

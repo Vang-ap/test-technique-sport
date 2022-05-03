@@ -15,5 +15,4 @@ export class PlayerItemComponent implements OnInit {
   ngOnInit(): void {
     this.dateBorn = this.player.born
   }
-
 }

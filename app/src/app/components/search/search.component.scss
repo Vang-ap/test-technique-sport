@@ -1,0 +1,75 @@
+.search-input {
+  width: 27rem;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.search-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-delete {
+  position: absolute;
+  left: 58.5%;
+  text-decoration: none;
+}
+
+.btn-search {
+  margin-left: 0.5rem;
+}
+
+// RESPONSIVE
+@media only screen and (max-width: 320px) {
+  .search-input {
+    width: 18rem !important;
+  }
+
+  .btn-delete {
+    position: absolute;
+    left: 82.1% !important;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .search-input {
+    width: 19rem !important;
+  }
+
+  .btn-delete {
+    position: absolute;
+    left: 84.1% !important;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .search-input {
+    width: 21rem ;
+  }
+
+  .btn-delete {
+    position: absolute;
+    left: 80.1% !important;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .search-input {
+    width: 21rem ;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .btn-delete {
+    position: absolute;
+    left: 67.1%;
+    text-decoration: none;
+  }
+}

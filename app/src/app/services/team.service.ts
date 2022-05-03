@@ -8,7 +8,6 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class TeamService {
-
   constructor(
     private httpClient: HttpClient,
   ) { }

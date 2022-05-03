@@ -1,7 +1,5 @@
 const express = require('express');
-
 const teamRouter = express.Router();
-
 const {getTeams, getTeam, getTeamId} = require('../controllers/controller.team');
 
 teamRouter.get('/all', getTeams);

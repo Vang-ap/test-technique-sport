@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SearchPageComponent } from './components/search-page/search-page.component';
+import { SearchComponent } from './components/search/search.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchPipe } from './pipes/search.pipe';
@@ -16,11 +15,10 @@ import { PlayerItemComponent } from './components/player-item/player-item.compon
 import { LeagueComponent } from './components/league/league.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
-    SearchPageComponent,
+    SearchComponent,
     SearchPipe,
     LeagueItemComponent,
     TeamComponent,

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { League } from 'src/app/models/league';
-import { SearchPageService } from 'src/app/services/search-page.service';
+import { SearchService } from 'src/app/services/search.service';
 
 @Component({
   selector: 'app-league',
@@ -11,13 +11,12 @@ export class LeagueComponent implements OnInit {
   leagues!: League[];
 
   constructor(
-    private searchPageService: SearchPageService
+    private searchService: SearchService
   ) { }
 
   ngOnInit(): void {
-    this.searchPageService.searchResponse$.subscribe((response: League[]) => {
+    this.searchService.searchResponse$.subscribe((response: League[]) => {
       this.leagues = response;
     })
   }
-
 }

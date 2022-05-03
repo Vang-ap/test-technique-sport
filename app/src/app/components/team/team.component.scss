@@ -3,5 +3,37 @@
   top: 15%;
   display: flex;
   flex-wrap: wrap;
-  margin-left: 20px;
+}
+
+// RESPONSIVE
+// mobile S 320px to mobile L 425px
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+  .team {
+    position: relative;
+    top: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin: 1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .team {
+    position: fixed;
+    top: 9%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .team {
+    position: fixed;
+    top: 13%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+  }
 }

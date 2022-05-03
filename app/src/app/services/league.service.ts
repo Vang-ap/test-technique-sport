@@ -8,7 +8,6 @@ import { League } from '../models/league';
   providedIn: 'root'
 })
 export class LeagueService {
-
   constructor(
     private httpClient: HttpClient,
   ) { }

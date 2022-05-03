@@ -8,7 +8,7 @@ import { LeagueService } from './league.service';
 @Injectable({
   providedIn: 'root'
 })
-export class SearchPageService {
+export class SearchService {
   searchResponse$ = new Subject<League[]>();
   leagues!: League[];
 
@@ -17,7 +17,6 @@ export class SearchPageService {
   ) {
     this.leagueService.getLeagues().subscribe((response: League[]) => {
       this.leagues = response;
-
     })
   }
 
@@ -26,6 +25,7 @@ export class SearchPageService {
       this.searchResponse$.next([]);
       return;
     }
+
     const results = this.leagues.filter(league => league.name.toLowerCase().includes(value.toLowerCase()));
 
     this.searchResponse$.next(results);

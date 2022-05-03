@@ -15,13 +15,12 @@ export class HomePageComponent implements OnInit {
     private leagueService: LeagueService
   ) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
+  // display leagues
   displayLeagues() {
     this.leagueService.getLeagues().subscribe((response: League[]) => {
       this.leagues = response
     })
   }
-
 }

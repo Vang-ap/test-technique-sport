@@ -1,11 +1,16 @@
 <div class="card">
   <img class="card-img-top" src="{{ player.thumbnail }}" alt="photo player">
+
   <div class="card-body">
     <h5 class="card-title">{{player.name}}</h5>
+
     <p> Position: {{player.position}} </p>
     <p> Date de naissance: {{dateBorn | date:'dd/MM/YYYY'}} </p>
-    <p> Prix: {{player.signin.amount}} <span>{{player.signin.currency}}</span> </p>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+    <p> Prix: {{player.signin.amount}}
+      <span>{{player.signin.currency}}</span>
+    </p>
+    <p>
+      Some quick example text to build on the card title and make up the bulk of the card's content.
     </p>
   </div>
 </div>

@@ -22,8 +22,6 @@ const routes: Routes = [
     path: 'players/:teamId',
     component: PlayerComponent
   },
-
-
 ];
 
 @NgModule({
