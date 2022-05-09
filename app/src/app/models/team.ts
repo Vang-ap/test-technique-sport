@@ -1,6 +1,6 @@
 export interface Team {
-  _id: String,
-  name: String,
-  thumbnail: String,
+  _id: string,
+  name: string,
+  thumbnail: string,
   players: []
 }

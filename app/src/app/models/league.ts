@@ -1,5 +1,5 @@
 export interface League {
-  _id: String,
+  _id: string,
   name: string;
   sport: string;
   teams: [];
