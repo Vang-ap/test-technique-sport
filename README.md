@@ -48,3 +48,7 @@ Pour lancer les tests unitaires, la commnade `ng test` est disponible
 Si on souhaite cibler un composant en particulier il faut venir modifier le chemain du dossier dans le fichier `test.ts`  
 
 -> partie à modifier : `const context = require.context('.', true, /\.spec\.ts$/);`  
+
+## Fichier env.dist
+
+Le fichier `.env.dist` permet au développeur de connaitre les clés à mettre dans son .env
