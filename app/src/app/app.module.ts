@@ -14,6 +14,7 @@ import { PlayerComponent } from './components/player/player.component';
 import { PlayerItemComponent } from './components/player-item/player-item.component';
 import { LeagueComponent } from './components/league/league.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
     PlayerItemComponent,
     LeagueComponent,
     HomePageComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

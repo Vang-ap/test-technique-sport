@@ -1,6 +1,6 @@
 
-import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Injectable, OnDestroy } from '@angular/core';
+import { Subject, Subscription } from 'rxjs';
 import { League } from '../models/league';
 import { LeagueService } from './league.service';
 
@@ -8,16 +8,23 @@ import { LeagueService } from './league.service';
 @Injectable({
   providedIn: 'root'
 })
-export class SearchService {
+export class SearchService implements OnDestroy {
   searchResponse$ = new Subject<League[]>();
   leagues!: League[];
+  subscription$!: Subscription;
 
   constructor(
     private leagueService: LeagueService
   ) {
-    this.leagueService.getLeagues().subscribe((response: League[]) => {
+    this.subscription$ = this.leagueService.getLeagues().subscribe((response: League[]) => {
       this.leagues = response;
     });
+  }
+
+  ngOnDestroy(): void {
+    if (this.subscription$) {
+      this.subscription$.unsubscribe();
+    }
   }
 
   search(value: string) {

@@ -1,0 +1,78 @@
+.img-notFound {
+  width: 100%;
+}
+
+.content-link {
+  margin-top: -15.2rem;
+  display: flex;
+  justify-content: end;
+  margin-right: 0.1rem;
+  font-size: 24.6px;
+}
+
+.content-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.btn-home-page {
+  width: 10.2rem;
+  font-size: 1rem;
+}
+
+// Responsive
+// screen 1024
+@media only screen and (max-width: 1024px) {
+  .content-link {
+    margin-top: -10.5rem;
+    margin-right: 0rem;
+    font-size: 16.6px;
+  }
+
+  .btn-home-page {
+    width: 9.7rem;
+    font-size: 0.8rem;
+  }
+
+}
+
+// screen 768
+@media only screen and (max-width: 768px) {
+  .content-link {
+    margin-top: -8.5rem;
+    font-size: 12.6px;
+  }
+
+  .btn-home-page {
+    width: 9.4rem;
+    font-size: 0.8rem;
+  }
+
+}
+
+// screen 425
+@media only screen and (max-width: 425px) {
+  .content-link {
+    margin-top: -4.5rem;
+    display: flex;
+    justify-content: end;
+    margin-right: 0.5rem;
+    font-size: 9px;
+  }
+}
+
+// screen 320
+@media only screen and (max-width: 320px) {
+  .content-link {
+    margin-top: -3.2rem;
+    display: flex;
+    justify-content: end;
+    margin-right: 0.1rem;
+    font-size: 8.6px;
+  }
+
+  .btn-home-page {
+    width: 7.2rem;
+    font-size: 0.6rem;
+  }
+}

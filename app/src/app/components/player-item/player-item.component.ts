@@ -10,8 +10,6 @@ export class PlayerItemComponent implements OnInit {
 
   dateBorn: any;
 
-  constructor() { }
-
   ngOnInit(): void {
     this.dateBorn = this.player.born
   }

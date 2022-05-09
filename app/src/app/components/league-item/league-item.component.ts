@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { League } from 'src/app/models/league';
 
 @Component({
@@ -6,10 +6,7 @@ import { League } from 'src/app/models/league';
   templateUrl: './league-item.component.html',
   styleUrls: ['./league-item.component.scss']
 })
-export class LeagueItemComponent implements OnInit {
+export class LeagueItemComponent {
   @Input() league!: League;
 
-  constructor() { }
-
-  ngOnInit(): void { }
 }
